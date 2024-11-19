@@ -1,0 +1,299 @@
+/* Header Styling */
+.header {
+    padding: 20px 150px;
+    border-bottom: 0px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-text .brand-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 12px;
+    color: #888;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Side Navbar Styling */
+.side-nav {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.side-nav.open {
+    left: 0;
+}
+
+.side-nav .close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    float: right;
+    cursor: pointer;
+}
+
+.side-nav-links {
+    list-style: none;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.side-nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.side-nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-text .brand-name {
+        font-size: 18px;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+/* Hero Section */
+.hero {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 200px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 200px;
+    gap: 20px;
+}
+
+.hero-mobile {
+    display: none;
+    ;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+}
+
+.hero-mobile h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-mobile p {
+    font-size: 18px;
+    color: #666;
+}
+
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.responsive-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 40px;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-weight: bold;
+    color: #333;
+}
+
+.show-get-started-btn {
+    display: none;
+    /* Display on mobile */
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #000;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+ 
+
+    .hero {
+        flex-direction: column;
+        /* text-align: center; */
+        gap: 30px;
+        padding: 20px;
+        display: none;
+    }
+
+    .get-started-btn {
+        display: none;
+        /* Display on mobile */
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .hero-mobile {
+        display: block;
+        flex-direction: column;
+        /* text-align: center; */
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .show-get-started-btn {
+        display: block;
+        /* Display on mobile */
+        padding: 10px 20px;
+        background-color: #ffcc00;
+        color: #000;
+        width: 100%;
+        text-decoration: none;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
